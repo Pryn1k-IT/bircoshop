@@ -1,0 +1,1281 @@
+@import "vars";
+@import "fonts";
+@import "libs";
+@import "../scss/_mixins/_my-mixins.scss";
+
+::placeholder {
+	color: $text;
+}
+
+::selection {
+	background-color: $accent;
+	color: #fff;
+}
+input, textarea, select { //Iphone style
+  appearance: none;
+  border-radius: 0;
+}
+.border-fon {
+	margin: 20px 0;
+	border-top: 1px solid $border;
+}
+
+#youtube_svg{
+	path:last-child{
+		fill: #fff;
+	}
+}
+
+#logo_svg{
+	path:nth-last-child(2){
+		fill: #fff;
+	}
+	path:nth-last-child(3){
+		fill: $accentl;
+	}
+}
+
+.lang{
+	position: relative;
+	width: 54px;
+	height: 24px;
+	z-index: 7;
+	@include mbu(sm){
+		width: 62px;
+		height: 28px;
+	}
+	&__wrp{
+		width: 54px;
+		height: 24px;
+		position: absolute;
+		text-align: center;
+		border: 1px solid #ccc;
+		border-radius: 12px;
+		background: #fff;
+		z-index: 2;
+		@include mbu(sm){
+			width: 62px;
+			height: 28px;
+			border-radius: 15px;
+		}
+		@include hover(){
+			height: 48px;
+			.lang__list2{
+				overflow: visible;
+				opacity: 100;
+			}
+		}
+	}
+	&__list{
+		@include mbu(sm){
+			margin: 3px 0;
+		}
+	}
+	&__list2{
+		opacity: 0;
+		overflow: hidden;
+		@include mbu(sm){
+			margin: -3px 0;
+		}
+	}
+}
+
+.b-b{
+	display: block;
+	border-bottom: 1px solid #ccc;
+	@include mbu(sm){
+
+	}
+}
+
+.link__arrow{
+	display: inline-block;
+	width: 6px;
+	height: 6px;
+	border-top: 1px solid #000;
+	border-right: 1px solid #000;
+	margin: 0 0 2px 8px;
+}
+.link__arrow-bot{
+	transform: rotate(135deg);
+}
+.link__arrow-gray{
+	border-top: 1px solid $text2l;
+	border-right: 1px solid $text2l;
+}
+.link__arrow-small{
+	width: 4px;
+	height: 4px;
+}
+.p-t{
+	padding-top: 100px;
+	@include mbu(sm){
+		padding-top: 0;
+	}
+}
+
+a{
+	color: $text2l;
+	text-decoration: underline #ccc;
+	@include hover(){
+		text-decoration: none;
+	}
+}
+a.hover{
+	@include hover(){
+		text-decoration: none;
+		color: $accentl;
+	}
+}
+a.hover2{
+	@include hover(){
+		text-decoration: none;
+		color: $accentl;
+		background: $border;
+	}
+}
+a.no-td{
+	text-decoration: none;
+}
+
+.td{
+	text-decoration: underline;
+	@include hover(){
+		text-decoration: none;
+	}
+}
+
+span.hover-span{
+	cursor: pointer;
+	display: block;
+	font-weight: 500;
+	@include hover(){
+		text-decoration: none;
+		color: $accentl;
+	}
+}
+
+.d-sm-none {
+	display: none;
+	@include mbu(sm){
+		display: block!important;
+	}
+}
+.flex {
+	display: flex;
+}
+.flex-md {
+	@include mbu(md){
+		display: flex;
+	}
+	@include mbu(lg){
+		display: block;
+	}
+}
+.flex-center{
+	justify-content: center;
+	align-items: center;
+}
+.flex-between{
+	justify-content: space-between;
+	align-items: center;
+}
+
+.flex-around{
+	justify-content: space-around;
+	align-items: center;
+}
+
+html{
+	font-size: $def-font-size;
+}
+body {
+	position: relative;
+	min-width: 320px;
+	position: relative;
+	line-height: 1.5;
+	font-family: $default-font;
+	font-weight: 200;
+	overflow-x: hidden;
+	color: $text;
+	&.loading{
+		@include loader();
+	}
+	&.stop-scrolling{
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+h1, .h1{
+	@include fz(32px);
+	font-weight: 300;
+	@include media-breakpoint-down(md){
+		@include fz(24px);
+	}
+	@include media-breakpoint-down(sm){
+		@include fz(19px);
+	}
+	&.top-n{
+		margin-top: 0px;
+	}
+}
+.h3{
+	@include fz(19px);
+	font-weight: 600;
+}
+.heading{
+	margin: 10px 0;
+	@include fz(26px);
+	@include media-breakpoint-down(md){
+		font-size: 1.571rem;
+	}
+	&__sm{
+		margin: 30px 0;
+		font-weight: 500;
+		@include fz(18px);
+		@include mbd(md){
+			@include fz(16px);
+		}
+	}
+	&__md{
+		@include adaptiv-value("font-size", 20, 16, 2);
+	}
+	&__lg{
+		margin: 10px 0;
+		@include adaptiv-value("font-size", 36, 20, 2);
+		line-height: 40px;
+	}
+	&__phone-number{
+		@include fz(16px);
+		white-space: nowrap;
+		font-weight: 500;
+	}
+	&__mtn{
+		margin-top: 0px;
+	}
+	&__up{
+		text-transform: uppercase;
+	}
+	&__left{
+		text-align: left;
+	}
+	&__center{
+		text-align: center;
+	}
+	&__bold{
+		font-weight: bold;
+	}
+}
+
+
+.text {
+	color: $text;
+	@include adaptiv-value("font-size", 14, 12, 0);
+	&__bold {
+		font-weight: bold;
+	}
+	&__accent {
+		font-weight: 500;
+		display: inline-block;
+	}
+	&__accent2 {
+		text-decoration: underline $grayl;
+		@include adaptiv-value("font-size", 16, 14, 0);
+	}
+	&__accent3 {
+		@include fz(12px);
+		color: $gray2;
+		white-space: nowrap;
+	}
+	&__accent4 {
+		@include fz(15px);
+		color: $text;
+	}
+	&__big {
+		color: $text;
+		@include adaptiv-value("font-size", 18, 16, 0);
+	}
+	&__td {
+		text-decoration: underline #ccc;
+	}
+	&__ntd {
+		text-decoration: none;
+	}
+	&__min {
+		@include fz(13px);
+	}
+	&__black {
+		color: $text;
+	}
+	&__n-wrp {
+		white-space: normal;
+	}
+	&__white {
+		color: #fff;
+	}
+	&__gray {
+		color: $textd;
+	}
+}
+
+
+.h{
+	@include fz(24px);
+	font-weight: bold;
+}
+.gray-bg{
+	background: #ddd;
+}
+.text-up, .uppercase{
+	text-transform: uppercase;
+}
+.text-low, .lowercase{
+	text-transform: lowercase;
+}
+.text-underline, .underline{
+	text-decoration: underline;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+.text-center{
+	text-align: center;
+}
+.hidden{
+	display: none;
+}
+.lowercase{
+	text-transform: lowercase;
+}
+.img-responsive{
+	display: block;
+	max-width: 100%;
+}
+ul{
+	list-style: none;
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+strong{
+	font-weight: 700;
+}
+
+.texteditor{
+	font-size: 1.143rem;
+	h1{
+		//font-size: size(32px);
+		@include fz(32px);
+		font-weight: bold;
+		margin-bottom: 20px;
+		@include media-breakpoint-down(sm){
+			@include fz(24px);
+		}
+	}
+	h2{
+		margin: $grid-gutter-width 0;
+		@include fz(24px);
+		font-weight: normal;
+		@include media-breakpoint-down(sm){
+			@include fz(19px);
+		}
+	}
+	h3{
+		margin: $grid-gutter-width/1.5 0;
+		@include fz(19px);
+		font-weight: normal;
+		//font-weight: bold;
+		@include media-breakpoint-down(sm){
+			@include fz(16px);
+		}
+	}
+	p{
+		font-size: 1.143rem;
+		line-height: 1.5em;
+		margin-bottom: $grid-gutter-width;
+		@include custom_breakpoint_max(1700px){
+			margin-bottom: $grid-gutter-width/1.5;
+		}
+		&:last-child{
+			margin-bottom: 0px;
+		}
+	}
+	ul, ol{
+		margin: $grid-gutter-width 0 !important;
+		padding-left: 2.5rem;
+		margin-bottom: 1rem;
+	}
+	ul{
+		list-style: disc outside; //inside
+		list-style: none;
+		padding: 0px;
+		li{
+			margin-top: 11px;
+			margin-bottom: 11px;
+			position: relative;
+			padding-left: 15px;
+			line-height: 1.3em;
+			&:before{
+				content: '';
+				display: block;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				background: $accent;
+				position: absolute;
+				left: 0px;
+				top: 8px;
+			}
+		}
+	}
+	.table-wrp{
+		overflow-x: auto;
+		max-width: 100%;
+	}
+	table{
+		border: 1px solid $grayl;
+		margin: 25px 0;
+		th{
+			padding: 15px;
+			color: $text;
+			background: #F3F6F7;
+		}
+		td{
+			padding: 7px 15px;
+			@include mbd(md){
+				@include fz(12px);
+				padding: 3px 5px !important;
+			}
+		}
+		th, td{
+			border-color: $grayl !important;
+			@include mbd(md){
+				@include fz(12px);
+				padding: 10px 5px !important;
+			}
+		}
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+		vertical-align: bottom;
+	}
+}
+.form{
+	width: 100%;
+	position: relative;
+	&__icon{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		top: 8px;
+		right: 8px;
+		height: 24px;
+		width: 24px;
+		border: none;
+		border-radius: 24px 24px 24px 0;
+		background: $accentl;
+		cursor: pointer;
+		@include hover(){
+			background: $accentd;
+		}
+	}
+	&__svg{
+		width: 15px;
+		height: 15px;
+		fill: white;
+	}
+	&__svg-2{
+		width: 12px;
+		height: 11px;
+		fill: white;
+	}
+}
+
+input[type="text"], 
+input[type="email"], 
+input[type="tel"],
+input[type="password"],
+input[type="number"], 
+input[name="password"],
+textarea, 
+.input-select{
+	width: 100%;
+	//margin-bottom: $gutter/1.5;
+	padding: 10px 30px;
+	border: 1px solid #000;
+	outline: none;
+	font-size: 0.95rem;
+	color: $text;
+	border-radius: 30px;
+	@include mbu(sm){
+		border: 1px solid $gray;
+	}
+	&::placeholder{
+		color: $textl;
+	}
+	&:focus{
+		border-color: $accentd;
+	}
+	&:focus:required:invalid, &.wpcf7-not-valid, &.empty_field{
+		border-color: $red;
+		&::placeholder{
+			color: red;
+		}
+	}
+	&:required:valid{
+		border-color: green;
+	}
+	&.icon-input{
+		padding-left: 60px;
+	}
+	&[type="submit"], &[type="checkbox"], &[type="radio"]{
+		width: auto;
+	}
+	&.btn{
+		display: inline-block;
+		width: auto;
+	}
+	&.error_input{
+		border-color: red;
+		&::placeholder{
+			color: red;
+		}
+		& + .input-group-addon i{
+			color: red !important;
+		}
+	}
+}
+textarea{
+	min-height: 88px;
+}
+.select-wrp{
+	display: block;
+	position: relative;
+	&:after{
+		content: url("data:image/svg+xml,%3Csvg viewBox='0 0 129 129' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cpath d='m121.3,34.6c-1.6-1.6-4.2-1.6-5.8,0l-51,51.1-51.1-51.1c-1.6-1.6-4.2-1.6-5.8,0-1.6,1.6-1.6,4.2 0,5.8l53.9,53.9c0.8,0.8 1.8,1.2 2.9,1.2 1,0 2.1-0.4 2.9-1.2l53.9-53.9c1.7-1.6 1.7-4.2 0.1-5.8z'/%3E%3C/svg%3E");
+		display: block;
+		width: 12px;
+		height: 12px;
+		margin-top: -8px;
+		position: absolute;
+		top: 50%;
+		right: 10px;
+		opacity: .7;
+	}
+	select{
+		border: 1px solid $grayd;
+		width: 100%;
+		display: block;
+		padding: 7px 10px;
+		background: #fff;
+		height: 39px;
+		margin: 0px;
+		border-radius: 0px !important;
+		outline: none;
+		appearance: none;
+		&:focus{
+			border-color: $accent;
+		}
+	}
+}
+//============================= \\
+// Alt radio and checkbox style  ))
+//============================= //
+// <div class="radio-set">
+// 	<input type="radio" id="id-1">
+// 	<label for="id-1">
+// 	  <span class="radio-alt"></span>
+// 	  <span class="name">Text</span>
+// 	</label>
+// </div>
+
+// <div class="stylled-checkbox">
+// 	<input type="checkbox" id="id-2" name="ch" value="1">
+// 	<label class="d-inline-block" for="id-2"><span>Текст</span></label>
+// </div>
+
+// <div class="stylled-radio">
+// 	<input type="radio" id="id-3" name="ch" value="1">
+// 	<label class="d-inline-block" for="id-3"><span>Текст</span></label>
+// </div>
+
+.stylled-checkbox{
+	input{
+		display: none;
+		&:checked + label{
+			//&:before{
+				//background: $accent;
+			//}
+			&:after{
+				transform: scale(0.7);
+			}
+		}
+	}
+	label{
+		display: inline-block;
+		position: relative;
+		padding: 0px 0px 0px 30px;
+		margin: 0px;
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			display: block;
+		}
+		&:before{
+			width: 18px;
+			height: 18px;
+			border: 1px solid $gray;
+			background: $white;
+			transition: background .3s ease;
+		}
+		&:after{
+			content: '';
+			margin: 3px;
+			width: 12px;
+			height: 12px;
+			transform: scale(0);
+			transition: transform .3s ease;
+			background-image: url("../svg/icons/leaf.svg");
+		}
+		@include hover(){
+			&:before{
+				background: $grayl;
+			}
+		}
+	}
+}
+.stylled-radio{
+	input{
+		display: none;
+		&:checked + label{
+			&:before{
+				background-image: url("../svg/icons/leaf.svg");
+				background-size: 10px 10px 14px 14px;
+				background-position: center;
+			}
+			&:after{
+				transform: scale(-0.3);
+			}
+		}
+	}
+	label{
+		display: inline-block;
+		position: relative;
+		padding: 0px 0px 0px 30px;
+		margin: 0px;
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			top: 2px;
+			left: 0px;
+			display: block;
+		}
+		&:before{
+			width: 18px;
+			height: 18px;
+			border: 1px solid $grayz;
+			border-radius: 50px;
+			background: $white;
+			transition: background .3s ease;
+		}
+		&:after{
+			width: 10px;
+			height: 10px;
+			margin: 4px;
+			transform: scale(-0.9);
+			transition: transform .3s ease;
+
+		}
+		@include hover(){
+			&:after{
+				background: $gray;
+				border-radius: 50px;
+			}
+		}
+	}
+}
+.radio-set{
+	input{
+		display: none;
+		&:checked + label{
+			.radio-alt{
+				&:before{
+					background: $accent;
+				}
+				&:after{
+					background: $white;
+					transform: scale(-0.3);
+				}
+			}
+		}
+	}
+	label{
+		.radio-alt{
+			display: inline-block;
+			position: relative;
+			width: 18px;
+			height: 18px;
+			margin-right: 10px;
+			&:before, &:after{
+				content: '';
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				display: block;
+			}
+			&:before{
+				width: 100%;
+				height: 100%;
+				border: 1px solid $grayz;
+				border-radius: 50px;
+				background: $white;
+				transition: background .3s ease;
+			}
+			&:after{
+				width: 100%;
+				height: 100%;
+				border-radius: 50px;
+				background: $white;
+				transform: scale(-0.9);
+				transition: transform .3s ease;
+			}
+		}
+		@include hover(){
+			.radio-alt{
+				&:after{
+					background: $grayl;
+				}
+			}
+		}
+	}
+}
+//  // =============================
+// ((  Alt radio and checkbox style 
+//  \\ =============================
+
+
+.btn{
+	display: inline-block;
+	padding: 10px 30px;
+	font-size: 1.143rem;
+	line-height: 1.2em;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	@include hover(){
+		outline: none;
+		text-decoration: none;
+	}
+	&__custom{
+		border: none;
+		background: none;
+		cursor: pointer;
+		padding: 0;
+		@include hover(){
+			background: $border;
+		}
+	}
+	span{
+		font-size: 17px;
+		@include mbu(sm){
+			font-size: 13px;
+		}
+	}
+	&__svg-left{
+		svg{
+			margin-right: 0px;
+			margin-left: 3px;
+		}
+	}
+	&__user {
+		display: inline-flex;
+		color: $text2;
+		background: #fff;
+		padding: 5px 0 5px 10px;
+		align-items: center;
+		top: -40px;
+		position: absolute;
+		@include mbu(sm){
+			position: unset;
+		}
+		@include hover() {
+			svg {
+				fill: $accentd;
+			}
+			span {
+				color: $accentd;
+				text-decoration: none;
+			}
+		}
+		svg {
+			fill: $grayz;
+			width: 18px;
+			height: 20px;
+			margin-right: 9px;
+			@include mbu(sm){
+				width: 14px;
+				height: 16px;
+			}
+		}
+	}
+	&__accent{
+		padding: 5px 10px;
+		color: $accentl;
+		display: flex;
+		align-items: center;
+		svg{
+			margin-left: 14px;
+			width: 29px;
+			height: 23px;
+			fill: $accentl;
+		}
+		@include hover(){
+			color: $accentd;
+			svg {
+				fill: $accentd;
+			}
+		}
+	}
+	&__accent-orange{
+		color: $accent2;
+		svg {
+			fill: $accent2;
+		}
+	}
+	&__accent2{
+		padding: 12.5px 31px;
+		display: inline-block;
+		color: #fff;
+		border-radius: 50px 0 50px 50px;
+		background: $accentl;
+		@include hover(){
+			color: $grayl;
+			background: $accentd;
+		}
+	}
+	&__accent3{
+		padding: 12.5px 31px;
+		display: inline-block;
+		color: #000;
+		@include hover(){
+			color: $accentd;
+		}
+	}
+	&__search {
+		padding: 4px 6px;
+		border-radius: 40px 40px 40px 0px;
+		font-size: unset;
+		background: $accentl;
+		@include hover(){
+			background: $accentd;
+		}
+		svg {
+			margin-bottom: -1px;
+			width: 12px;
+			height: 12px;
+			fill: #fff;
+		}
+	}
+	&__normal{
+		font-weight: normal;
+	}
+	&__height{
+		padding-top: 11px;
+		padding-bottom: 11px;
+	}
+	&__low{
+		text-transform: none;
+	}
+	&__up{
+		text-transform: uppercase;
+	}
+	&__wide{
+		width: 100%;
+		text-align: center;
+	}
+	&__size_sm{
+		padding: 3px 10px 2px;
+	}
+	&__size_lg{
+		font-size: 1.1rem;
+		padding: 12px 47px;
+	}
+	&__invers{
+		background: $white;
+		box-shadow: 0px 4px 7px -4px rgba(0, 0, 0, 0.50), 0px 0px 0px 2px $accent inset !important;
+		color: $accent;
+		box-shadow: none;
+		@include hover(){
+			outline: none;
+			color: #fff;
+			background: $accent;
+			box-shadow: 0px 4px 7px -4px rgba(0, 0, 0, 0.50);
+		}
+	}
+	&__invers2{
+		background: $white;
+		box-shadow: 0px 4px 7px -4px rgba(0, 0, 0, 0.50), 0px 0px 0px 1px $accent2d inset !important;
+		color: $accent2d;
+		box-shadow: none;
+		text-align: center;
+		font-weight: normal;
+		svg{
+			fill: $accent2d;
+		}
+		@include hover(){
+			outline: none;
+			color: $white;
+			background: $accent2d;
+			box-shadow: 0px 4px 7px -4px rgba(0, 0, 0, 0.50);
+			svg{
+				fill: $white;
+			}
+		}
+		&__active{
+			outline: none;
+			color: $white;
+			background: $accent2d;
+			box-shadow: 0px 4px 7px -4px rgba(0, 0, 0, 0.50);
+			svg{
+				fill: $white;
+			}
+		}
+		&__invers-no-shaddow{
+			box-shadow: 0px 0px 0px 1px $accent2d inset !important;
+		}
+	}
+	&__accent-b{
+		background: $accent2d;
+	}
+}
+
+a, button, input{
+	outline: none !important;
+}
+
+.slick-slide{
+	.item{
+		display: block !important; //Убирает странный отступ внизу
+	}
+}
+.slick-slider{
+	opacity: 0;
+	&.slick-initialized{
+		opacity: 1;
+	}
+}
+.slick-disable-center{
+	.slick-track{
+		@include media-breakpoint-up(md){
+			margin-left: 0px;
+			margin-right: 0px;
+		}
+	}
+}
+
+img.lazy{
+	width: 100%;
+	height: auto;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px' viewBox='0 0 51.9 12' style='enable-background:new 0 0 51.9 12;' xml:space='preserve'%3E%3Cstyle type='text/css'%3E .st0%7Bfill:%23A1C4FD;%7D %3C/style%3E%3Ccircle class='st0' cx='6' cy='6' r='6'%3E%3Canimate accumulate='none' additive='replace' attributeName='opacity' begin='0.1' calcMode='linear' dur='1s' fill='remove' repeatCount='indefinite' restart='always' values='0;1;0'%3E%3C/animate%3E%3C/circle%3E%3Ccircle class='st0' cx='26' cy='6' r='6'%3E%3Canimate accumulate='none' additive='replace' attributeName='opacity' begin='0.2' calcMode='linear' dur='1s' fill='remove' repeatCount='indefinite' restart='always' values='0;1;0'%3E%3C/animate%3E%3C/circle%3E%3Ccircle class='st0' cx='46' cy='6' r='6'%3E%3Canimate accumulate='none' additive='replace' attributeName='opacity' begin='0.3' calcMode='linear' dur='1s' fill='remove' repeatCount='indefinite' restart='always' values='0;1;0'%3E%3C/animate%3E%3C/circle%3E%3C/svg%3E%0A");
+	background-size: 50% 50%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	&.loaded{
+		width: auto;
+		max-width: 100%;
+		background: none;
+		background-size: auto;
+	}
+}
+
+
+.has-child{
+	& > ul{
+		padding-left: 20px;
+		//display: none
+		max-height: 0;
+		overflow-y: hidden;
+		transition: max-height .3s ease;
+	}
+	&.active{
+		& > ul{
+			//display: block
+			max-height: 700px;
+		}
+	}
+}
+
+.alert{
+	position: relative;
+	margin: 10px 0;
+	padding: 8px 18px;
+	font-size: 1rem;
+	background: #ffffe0;
+	br, .close{
+		display: none;
+	}
+	p{
+		margin-bottom: 0px;
+	}
+	&-arrow{
+		&:before{
+			content: '';
+			position: absolute;
+			left: 5%;
+			bottom: 100%;
+			width: 0;
+			height: 0;
+			border-left: 5px solid transparent;
+			border-right: 5px solid transparent;
+			border-bottom: 5px solid $accentd;
+		}
+	}
+	&-to-top{
+		margin-top: -10px;
+	}
+	&-yellow{
+		background: #ffffe0;
+	}
+	&-red, &-danger{
+		color: #fff;
+		background: $accentd;
+	}
+}
+
+.site-block{
+	margin-top: $section-mg;
+	margin-bottom: $section-mg;
+	@include media-breakpoint-down(sm){
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+}
+.wrapper{
+	max-width: $site-width;
+	margin: 0 auto;
+	// @include custom_breakpoint_min($site-lg-breakpoint){ //Другая ширина для больших монитовров
+	// 	max-width: $site-lg-width
+	// }
+}
+
+
+//======================================================================================
+//======================================================================================
+
+
+
+//======================================================================================
+//======================================================================================
+
+// css scroll style
+.site-scroll, .scrollblock{
+	overflow: auto;
+	padding-right: 15px;
+	margin-right: -15px;
+	scrollbar-width: thin;
+	scrollbar-color: $accent $grayz;
+
+	&::-webkit-scrollbar {
+	  width: 4px;
+	}
+	&::-webkit-scrollbar-track {
+		border-radius: 0px;
+	  background: $grayz;
+	}
+	&::-webkit-scrollbar-thumb {
+	  background-color: $accent;
+	  border-radius: 0px;
+	  border: 0px solid $grayz;
+	}
+}
+
+// ---------------- MODALS  >> ----------------
+.mfp-bg{
+	opacity: 0.4 !important;
+}
+.modal{
+	position: relative;
+	background: $white;
+	padding: 0px 0px;
+	max-width: 505px;
+	width: auto;
+	text-align: left;
+	margin: 20px auto;
+	border-radius: 4px;
+	overflow: hidden;
+	&_size_sm-popup{
+		max-width: 485px;
+	}
+	&_size_lg-modal{
+		max-width: 1024px;
+	}
+	.mfp-close{
+		color: #fff;
+		opacity: 1;
+		transition: transform .3s ease;
+		@include hover(){
+			transform: scale(1.2);
+		}
+	}
+	&__mod-header{
+		padding: 10px 40px;
+		margin-bottom: 30px;
+		text-align: center;
+		background: $accent;
+		color: #fff;
+		font-weight: 600;
+		font-size: 1.15rem;
+		text-transform: uppercase;
+	}
+	&__mod-content{
+		padding-left: 20px;
+		padding-right: 20px;
+		.item{
+			margin-bottom: 8px;
+			input, textarea{
+				margin-bottom: 0px;
+			}
+			.label-col{
+				display: flex;
+				align-items: center;
+				label{
+					display: inline-block;
+					margin-bottom: 0px;
+				}
+				@include media-breakpoint-down(md){
+					display: none;
+				}
+			}
+		}
+	}
+	&__mod-footer{
+		padding: 15px 20px 20px;
+		.notify{
+			margin-top: 15px;
+			padding: 0 15px;
+			font-size: .85rem;
+			line-height: 1.4em;
+		}
+	}
+}
+.mfp-zoom-in{
+	.modal{
+		opacity: 0;
+		transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+		transform: translateY(-100px) scale(0.95);
+	}
+	&.mfp-bg{
+		opacity: 0;
+		transition: transform 0.4s ease-out, opacity 0.3s ease-in-out;
+	}
+	/* animate in */
+	&.mfp-ready{
+		.modal{
+			opacity: 1;
+			transform: translateY(0) scale(1);
+		}
+		&.mfp-bg{
+			opacity: 0.8;
+		}
+	}
+	/* animate out */
+	&.mfp-removing{
+		.modal{
+			transform: translateY(-100px) scale(0.95);
+			opacity: 0;
+		}
+	}
+}
+/* =transition */
+.mfp-gallery-zoom-in{
+	.mfp-figure, 
+	.mfp-iframe-holder 
+	.mfp-iframe-scaler{
+		opacity: 0;
+		transition: all 0.3s ease-out;
+		transform: scale(0.95);
+		transform-style: preserve-3d;
+	}
+	.mfp-figure{
+		opacity: 0;
+	}
+	.mfp-iframe-scaler{
+		overflow: visible; /*so the close button is shown*/
+	}
+	&.mfp-zoom-out-cur { 
+		cursor: auto;
+		.mfp-image-holder .mfp-close { 
+			cursor: pointer; 
+		}
+	}
+	&.mfp-bg,
+	.mfp-preloader{
+		opacity: 0;
+		transition: all 0.3s ease-out;
+	}
+	&.mfp-image-loaded .mfp-figure,
+	&.mfp-ready .mfp-iframe-holder .mfp-iframe-scaler{
+		opacity: 1;
+		transform: scale(1);
+		transform-style: preserve-3d;
+	}
+	&.mfp-ready.mfp-bg,
+	&.mfp-ready .mfp-preloader {
+		opacity: 0.8;
+	}
+	&.mfp-removing .mfp-figure, 
+	&.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler{
+		transform: scale(0.95);
+		transform-style: preserve-3d;
+		opacity: 0;
+	}
+	&.mfp-removing.mfp-bg,
+	&.mfp-removing .mfp-preloader {
+		opacity: 0;
+	}
+	.mfp-preloader{
+		@include loader_block();
+	}
+}
+// ---------------- >> MODALS ----------------
+
+//-------------- ANIMATION -----------------
+@keyframes mfp_gallery_open {
+  0%   {
+  	opacity: 0;
+  	transform: translateX(-10%);
+  }
+  100% {
+  	opacity: 1;
+  	transform: translateX(10%);
+  }
+}
+
+@keyframes mfp_gallery_close {
+  0%   {opacity: 1;}
+  100% {opacity: 0;}
+}
+@keyframes spin{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin_reverse{
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(-360deg);
+  }
+}
+//-------------- ANIMATION -----------------

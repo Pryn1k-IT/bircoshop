@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+	<title>Gulp4Statrt</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="stylesheet" href="/style.css?v=2" type="text/css">
+	<!-- Favicon all size generator -->
+	<!-- https://realfavicongenerator.net/ -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+
+
+	<link rel="preload" as="style" href="build/styles.min.css?cache_v=6044377">
+	<link rel="preload" as="script" href="build/scripts.min.js?cache_v=6044377">
+	<!-- Template Basic Images End -->
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+	<link rel="stylesheet" href="build/styles.min.css?cache_v=6044377">
+</head>
+<body>
+	<header class="header">
+		<div class="container-fluid wrapper">
+			<div class="header__wrp flex">
+
+				<svg class="nav-svg">
+					<use xlink:href="#menu_svg"></use>
+				</svg>
+
+				<a class="header__logo" href="main.html">
+					<svg>
+						<use xlink:href="#logo_svg"></use>
+					</svg>
+				</a>
+
+				<div class="lang">
+					<ul class="lang__wrp">
+						<li class="lang__list">Рус<span class="link__arrow link__arrow-bot link__arrow-small"></span></li>
+						<li class="lang__list2">Eng</li>
+					</ul>
+				</div>
+
+				<form class="header__form form">
+					<input type="text" placeholder="Заполните поле">
+					<button class="form__icon">
+						<svg class="form__svg">
+							<use xlink:href="#search_svg"></use>
+						</svg>
+					</button>
+				</form>
+
+				<div class="header__contact">
+					<div class="massanger">
+						<svg class="massanger-svg">
+							<use xlink:href="#vk_svg"></use>
+						</svg>
+						<svg class="massanger-svg">
+							<use xlink:href="#facebook_svg"></use>
+						</svg>
+						<svg class="massanger-svg">
+							<use xlink:href="#youtube_svg"></use>
+						</svg>
+						<svg class="massanger-svg">
+							<use xlink:href="#instagram_svg"></use>
+						</svg>
+					</div>
+					<span class="header__phone heading__phone-number">
+						8(931)270-54-54
+					</span>
+					<a class="header__mail hover text__accent3" href="">
+						info@birkoshop.ru
+					</a>
+				</div>
+				
+				<div class="header__fav-wrp">
+					<button class="btn__custom">
+						<svg class="header__search-sm">
+							<use xlink:href="#search_svg"></use>
+						</svg>
+					</button>
+					<a class="header__fav-bag no-td" href="#">
+						<svg class="header__fav-bag-svg_style header__fav-svg">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+						<span class="d-sm-none">
+							<span class="text__accent3 text__black">
+								Избранное
+							</span><br>
+							<span class="text__accent3 td">
+								1 товара
+							</span>
+						</span>
+					</a>
+
+					<a class="header__fav-bag no-td" href="#">
+						<svg class="header__fav-bag-svg_style header__bag-svg">
+							<use xlink:href="#shopping-bag_svg"></use>
+						</svg>
+						<span class="d-sm-none">
+							<span class="text__accent3 text__black no-tdr">
+								Корзина (1)
+							</span><br>
+							<span class="text__accent3 td">
+								11 12111 руб
+							</span>
+						</span>
+					</a>
+				</div>
+
+			</div>
+		</div>
+	</header> <!-- end header-->
+
+
+	<div id="nav-sm" class="nav-sm container-fluid wrapper">
+		<a href="#" class="closebtn">×</a>
+			<nav class="nav">
+				<ul class="nav__list flex">
+					<li class="nav__link nav__link-list">
+						<span class="hover-span">Женская обувь<span class="link__arrow link__arrow-bot"></span></span>
+						<ul class="nav__list-in">
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь такая</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь другая</li></a>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь еще какая-то</li></a>
+						</ul>
+					</li>
+					<li class="nav__link nav__link-list">
+						<span class="hover-span">Мужская обувь<span class="link__arrow link__arrow-bot"></span></span>
+						<ul class="nav__list-in">
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь такая</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь другая</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь еще какая-то</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь другая</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь еще какая-то</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь другая</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь еще какая-то</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь другая</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь еще какая-то</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь другая</a></li>
+							<li class="nav__link-in"><a class="hover2 no-td b-b" href="#">Обувь еще какая-то</a></li>
+						</ul>
+					</li>
+					<li class="nav__link nav__link-list">
+						<span class="hover-span">Детская обувь<span class="link__arrow link__arrow-bot"></span></span>
+					</li>
+				</ul>
+
+				<ul class="nav__list flex">
+					<li class="nav__link"><a class="hover no-td" href="#">Носки</a></li>
+					<li class="nav__link"><a class="hover no-td" href="#">Ремни</a></li>
+					<li class="nav__link"><a class="hover no-td" href="#">Сумки</a></li>
+					<li class="nav__link nav__link2"><a class="hover no-td" href="#">Скидки</a></li>
+					<li class="nav__link"><a class="hover no-td" href="#">Доставка и оплата</a></li>
+					<li class="nav__link"><a class="hover no-td" href="#">О нас</a></li>
+				</ul>
+
+				<button class="btn btn__user">
+					<svg class="svg">
+						<use xlink:href="#user_svg"></use>
+					</svg>
+					<span class="text__accent3 text__td">Войти</span>
+				</button>
+			</nav> <!-- end nav-->
+	</div>
+
+	<div class="container-fluid wrapper p-t">
+		<div class="head-banner">
+
+				<div class="head-banner__inner head-banner__1">
+					<a href="#"><img src="img/banner-1.png" alt=""></a>
+					<div class="head-banner__text-style head-banner__text1">
+						<span class="text text__gray">Лето 2018</span>
+						<span class="heading__lg text__white">Новая <br> колекция</span>
+						<a class="head-banner__btn btn btn__accent btn__accent-orange" href="#">
+							<span>Смотреть</span>
+							<svg class="svg">
+								<use xlink:href="#right_svg"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<div class="head-banner__inner_2 head-banner__2">
+					<a href="#"><img src="img/banner-2.png" alt=""></a>
+					<div class="head-banner__text-style head-banner__text1">
+						<span class="text text__gray">Лето-осень 2018</span>
+						<span class="heading">Каталог <br> новой обуви</span>
+						<a class="head-banner__btn btn btn__accent btn__accent-orange" href="#">
+							<span>Купить кеды</span>
+							<svg class="svg">
+								<use xlink:href="#right_svg"></use>
+							</svg>
+						</a>
+					</div>
+				</div>
+
+				<div class="head-banner__inner_2 head-banner__3">
+					<a href="#"><img src="img/banner-3.png" alt=""></a>
+					<div class="head-banner__text-style head-banner__text3">
+						<span class="heading__md text__white">Мужские <br> Тапочки</span>
+						<span class="text text__gray">28 моделей</span>
+					</div>
+				</div>
+
+				<div class="head-banner__inner_2 head-banner__4">
+					<a href="#"><img src="img/banner-4.png" alt=""></a>
+				</div>
+				
+		</div><!-- end head banner-->
+
+
+		<div class="heading__sm">Новая продукция</div>
+
+		<div class="row products">
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+								<div class="product__sale-style product__new">new</div>
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+
+						<button class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</button>
+
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+								<div class="product__sale-style product__new">new</div>
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+							asfd asdfs sdaf
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__new">new</div>
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__new">new</div>
+
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+							izona Berkenstock 051101
+							izona Berkenstock 051101
+							izona Berkenstock 051101
+							izona Berkenstock 051101
+							izona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+								<div class="product__sale-style product__new">new</div>
+							</div>
+							<div class="product__sale-wrp_position">
+
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+								<div class="product__sale-style product__new">new</div>
+
+							</div>
+							<div class="product__sale-wrp_position">
+
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__new">new</div>
+							</div>
+							<div class="product__sale-wrp_position">
+
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+								<div class="product__sale-style product__new">new</div>
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="border-fon"></div>
+
+	<div class="container-fluid wrapper">
+		<div class="news">
+			<div class="row">
+				<div class="col-6 col-lg-3">
+
+					<div class="heading__sm heading__mtn">Новости и статьи</div>
+					<div class="news__menu">
+						<div class="news__menu-list news__menu-list_active">
+							<div class="news__marker-style"></div>
+							<a href="#" class="news__menu-link text__accent3">Новости</a>
+						</div>
+						<div class="news__menu-list">
+							<div class="news__marker-style"></div>
+							<a href="#"  class="news__menu-link text__accent3">Статьи</a>
+						</div>
+						<div class="news__menu-list">
+							<div class="news__marker-style"></div>
+							<a href="#"  class="news__menu-link text__accent3">Советы</a>
+						</div>
+					</div>
+					<a class="news__btn btn btn__accent" href="#">
+						<span>Перейти в раздел</span>
+						<svg class="svg">
+							<use xlink:href="#right_svg"></use>
+						</svg>
+					</a>
+
+				</div>
+
+				<div class="col-6 col-lg-3">
+					<a href="#"><img class="news__img" src="img/news-1.png"></a>
+					<div class="news__wrp-text">
+						<p class="news__text text__min text__td">У нас стартовали продажи официальной коллекции
+						обуви с символикой чемпионата мира по футболу asdfs dsafsadf dfg dfgdf gdfg dfg dfg dfgd dfgdfgd sadfsadf sdfsdf fdsfsd fdsf sdfs sdfsdf sdfsd fsd fsd </p>
+						<span class="news__date text__accent3">08.05.2018</span>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<a href="#"><img class="news__img" src="img/news-2.png"></a>
+					<div class="news__wrp-text">
+						<p class="news__text text__min text__td">У нас стартовали продажи официальной коллекции
+						обуви</p>
+						<span class="news__date text__accent3">08.05.2018</span>
+					</div>
+				</div>
+				<div class="col-6 col-lg-3">
+					<a href="#"><img class="news__img" src="img/news-3.png"></a>
+					<div class="news__wrp-text">
+						<p class="news__text text__min text__td">У нас стартовали продажи официальной коллекции
+						обуви с символикой чемпионата мира по футболу</p>
+						<span class="news__date text__accent3">08.05.2018</span>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end main product-->
+	</div>
+
+	<div class="container-fluid wrapper">
+		<div class="cent-banner">
+			<div class="cent-banner__inner cent-banner__1">
+				<img src="img/foot-banner-3.png" alt="">
+			</div>
+
+			<div class="cent-banner__inner-2 cent-banner__2">
+				<img src="img/foot-banner-2.png" alt="">
+			</div>
+
+			<div class="cent-banner__inner-3 cent-banner__3">
+				<img src="img/foot-banner-1.png" alt="">
+			</div>
+		</div><!-- end center banner-->
+
+
+		<div class="heading__sm">Рекомендуем</div>
+
+		<div class="row">
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+							</div>
+							<div class="product__sale-wrp_position">
+
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="product col-6 col-lg-3">
+				<div class="inner">
+
+					<div class="product__wrp">
+						<a href="#"><img class="product__img" src="img/product-1.png" alt=""></a>
+						<div class="product__sale-wrp">
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__hot">hot</div>
+							</div>
+							<div class="product__sale-wrp_position">
+								<div class="product__sale-style product__disc">-10%</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="product__info">
+						<span class="product__type">Сандалии мужские</span>
+						<a href="#" class="product__name text__accent2 hover">
+							Сандалии ортопедические
+							Arizona Berkenstock 051101
+						</a>
+						<div class="product__cost-wrp">
+							<span class="text__big">5 650<em>₽</em></span>
+						</div>
+					</div>
+
+					<div class="product__buy">
+						<svg class="product__svg svg__black">
+							<use xlink:href="#scale_svg"></use>
+						</svg>
+						<div class="product__amount">
+							<span class="text__accent4">1</span>
+							<span class="link__arrow link__arrow-bot link__arrow-gray"></span>
+							<svg class="product__svg svg__green">
+								<use xlink:href="#shopping-bag_svg"></use>
+							</svg>
+						</div>
+						<svg class="product__svg svg__red">
+							<use xlink:href="#heart_svg"></use>
+						</svg>
+					</div>
+
+				</div>
+			</div>
+		</div> <!-- end recomend product-->
+	</div>
+	<div class="border-fon"></div>
+	<div class="container-fluid wrapper">
+		<div class="about-company">
+			<div class="row">
+				<div class="col-12 col-lg-8">
+					<div class="about-company__text texteditor">
+						<div class="heading__sm">О нашей компании</div>
+						<p class="text">
+							Немецкая компания Birkenstock Orthopaedie GmbH известна во всем мире как фирма,
+							производящая "правильную" профилактическую обувь, ортопедические стельки, а также средства
+							ухода за обувью и непосредственно за ногами. Первые магазины обуви Birkenstock открылись в 
+							Германии в 1896 году, и с тех пор бизнес неуклонно расширялся. Владельцы компании - семья 
+							Биркеншток - всегда уделяли особое внимание ортопедическим свойствам обуви, даже во время войны 
+							фирма оказывала помощь раненым, производя для них специализированную обувь по индивидуальным 
+							меркам.
+						</p>
+
+						<p class="text">
+							В 1947 году вышла книга "Ортопедическая система Birkenstock", которая стала весьма популярной среди
+							специалистов, а изложенные в ней сведения не теряют актуальности и в наше время.
+							Компания известна собственными разработками и новыми технологиями, каждый год появляются
+							новые модели, а число покупателей неуклонно возрастает. Сейчас обувь Birkenstock продается
+							более чем в 80 странах мира.
+						</p>
+					</div>
+				</div>
+				<div class="col-12 col-lg-4 flex-md">
+					<div class="about-company__info-wrp">
+
+							<div class="about-company__info-block">
+								<img src="img/info-block-1.png">
+								<span class="text text__min">Бесплатная доставка</span>
+							</div>
+
+							<div class="about-company__info-block">
+								<img src="img/info-block-2.png">
+								<span class="text text__min">Шоурум в Москве</span>
+							</div>
+
+							<div class="about-company__info-block">
+								<img src="img/info-block-3.png">
+								<span class="text text__min">Оригинальный товар</span>
+							</div>
+
+							<div class="about-company__info-block">
+								<img src="img/info-block-4.png">
+								<span class="text text__min">Возврат и обмен</span>
+							</div>
+
+					</div>
+
+					<div class="about-company__sub">
+						<span class="text__accent">Подписаться на рассылку</span>
+						<form class="form form-width">
+							<input type="text" placeholder="Электронная почта">
+							<button class="form__icon">
+								<svg class="form__svg-2">
+									<use xlink:href="#check_svg"></use>
+								</svg>
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div> <!-- end about-company-->
+
+	</div>
+
+
+	<footer class="footer">
+		
+		<div class="container-fluid wrapper">
+			<div class="row">
+				<div class="col-12 col-sm-6 col-md-4">
+					<span class="text__accent">Продукция</span>
+					<ul class="footer__menu">
+						<li class="footer__menu-link"><a href="#">Женская обувь</a></li>
+						<li class="footer__menu-link"><a href="#">Носки</a></li>
+						<li class="footer__menu-link"><a href="#">Мужская обувь</a></li>
+						<li class="footer__menu-link"><a href="#">Ремни</a></li>
+						<li class="footer__menu-link"><a href="#">Детская обувь</a></li>
+						<li class="footer__menu-link"><a href="#">Сумки</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-sm-6 col-md-4">
+					<span class="text__accent">Покупателю</span>
+					<ul class="footer__menu">
+						<li class="footer__menu-link"><a href="#">Доставка и оплата</a></li>
+						<li class="footer__menu-link"><a href="#">Скидки</a></li>
+						<li class="footer__menu-link"><a href="#">О нас</a></li>
+						<li class="footer__menu-link"><a href="#">Статьи</a></li>
+						<li class="footer__menu-link"><a href="#">Контакты</a></li>
+						<li class="footer__menu-link"><a href="#">Карта сайта</a></li>
+					</ul>
+				</div>
+				<div class="col-12 col-md-4">
+					<div class="footer__info-company">
+						<div class="footer__svg">
+
+							<a class="footer__logo-link flex" href="#"> 
+								<svg class="footer__svg-logo">
+									<use xlink:href="#logo_svg"></use>
+								</svg>
+							</a>
+
+							<a class="flex" href="#"> 
+								<svg class="massanger-svg massanger-svg__big">
+									<use xlink:href="#vk_svg"></use>
+								</svg>
+							</a>
+
+							<a class="flex" href="#"> 
+								<svg class="massanger-svg massanger-svg__big">
+									<use xlink:href="#facebook_svg"></use>
+								</svg>
+							</a>
+
+							<a class="flex" href="#"> 
+								<svg class="massanger-svg massanger-svg__big">
+									<use xlink:href="#youtube_svg"></use>
+								</svg>
+							</a>
+
+							<a class="flex" href="#"> 
+								<svg class="massanger-svg massanger-svg__big">
+									<use xlink:href="#instagram_svg"></use>
+								</svg>
+							</a>
+
+						</div>
+						<p class="text__accent3 text__n-wrp">
+							Немецкая компания Birkenstock Othopaedie GmbH известна во всем мире как
+							фирма, производящая "правильную" профилактическую обувь.
+						</p>
+						<div class="footer__feedback">
+							<span class="heading__phone-number">8(931)270-54-54</span>
+							<a class="text__accent3 hover" href="#">info@birkoshop.ru</a>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row footer__right">
+				<div class="col-12 col-lg-5 order-2 order-sm-0">
+					<span class="right__text">
+						@ 2018 - БиркоШоп. Все права защищены, копирование запрещено.
+					</span>
+				</div>
+				<div class="col-12 col-lg-4">
+					<a class="footer__user hover" href="#">
+						Войти на сайт
+					</a>
+					<a class="hover" href="#">
+						Пользовательское соглашение
+					</a>
+				</div>
+			</div>
+		</div>
+
+	</footer>
+
+	<script src="build/scripts.min.js?cache_v=6044377"></script>
+
+<script>
+
+$(document).on('click', '.nav-svg, .closebtn', function(event) {
+	event.preventDefault();
+
+	$('.nav-sm').toggleClass('active'),
+	$('body').toggleClass('stop-scrolling');
+});
+
+
+$(document).on('click', '.header__search-sm', function(event) {
+	event.preventDefault();
+
+	$('.header__form').toggleClass('active');
+});
+
+
+
+
+$(document).on('click', '.nav__link', function(event) {
+	event.preventDefault();
+
+	$(this).toggleClass('active');
+});
+
+</script>
+</body>
+</html>
